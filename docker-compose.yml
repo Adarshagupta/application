@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  app:
+    image: yourusername/ai-image-generator:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - REPLICATE_API_TOKEN=${REPLICATE_API_TOKEN}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+      - NEXTAUTH_URL=${NEXTAUTH_URL}
+    restart: always
